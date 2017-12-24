@@ -1,0 +1,24 @@
+typedef enum { false, true } bool;
+
+void reset_buffer(void);
+void reset_escape_buffer(void);
+void init_buffer(void);
+void free_buffer(void);
+void shift_up(void);
+void shift_down(void);
+void next_cursor(bool do_shift);
+void prev_cursor(bool do_shift);
+void up_cursor(void);
+void down_cursor(void);
+void newline(void);
+unsigned short int cursor_pos(void);
+void newchar(char c);
+void print_char(char c);
+void backspace();
+void escape_buffer_handler(char c);
+void _draw_display(void);
+void handle_dirty(void);
+int senddata(char c);
+int sendbuffer(char* c);
+int recvdata();
+int main(void);
